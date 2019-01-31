@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { slide as Menu } from 'react-burger-menu';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import {Grid} from '@material-ui/core/Grid';
 
 
 class Landing extends React.Component {
@@ -69,28 +70,62 @@ class Logo extends React.Component {
 class PicCarousel extends React.Component {
     render() {
         return (
-            <Carousel interval="3000" autoPlay="true" >
+            <Carousel interval="3000" autoPlay="true" showThumbs={false} infiniteLoop="true" showStatus={false} >
                
                
-                <div className="grid-container">
-                    <img className="city" className="grid-item"  src="/images/cities/amsterdambig.jpg" />
+                
+            <div>
+                    <img className="city" src="/images/cities/amsterdambig.jpg" />
                     <p className="legend">Amsterdam</p>
-                    <img className="city" className="grid-item"  src="/images/cities/londonbig.jpg" />
+
+                    </div>
+                    <div>
+                    <img className="city" src="/images/cities/londonbig.jpg" />
                     <p className="legend">London</p>
-                    <img className="city" className="grid-item"  src="/images/cities/Rome.jpg" />
+                    </div>
+                    <div>
+                    
+                    <img className="city" src="/images/cities/Rome.jpg" />
                     <p className="legend">Rome</p>
-                    <img className="city" className="grid-item"  src="/images/cities/Split.jpg" />
-                <p className="legend">Split</p>
-                </div>
+                    </div>
+                    <div>
+                    <img className="city" src="/images/cities/Split.jpg" />
+                    <p className="legend">Split</p>
+
+                     </div>
+                
+
                 <div>
+                <img className="city" src="/images/cities/Miami.jpg" />
+                    <p className="legend">Miami</p>
+                </div>
+
+                <div>
+                <img className="city" src="/images/cities/ParisBig.jpg" />
+                    <p className="legend">Paris</p>
                 
                 </div>
                 <div>
+                <img className="city" src="/images/cities/Lisboa.jpg" />
+                    <p className="legend">Lisboa</p>
                 
                 </div>
                 <div>
+                <img className="city" src="/images/cities/Barcelonabig.jpg" />
+                    <p className="legend">Barcelona</p>
                 
                 </div>
+                <div>
+                <img className="city" src="/images/cities/Athens.jpg" />
+                    <p className="legend">Athens</p>
+                
+                </div>
+                <div>
+                <img className="city" src="/images/cities/new_york_1.jpg" />
+                    <p className="legend">New York</p>
+                
+                </div>
+                
             </Carousel>
         );
     }
