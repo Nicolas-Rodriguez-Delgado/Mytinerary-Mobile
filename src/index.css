@@ -13,24 +13,49 @@ code {
     monospace;
 }
 
-.avatarPic {
-  width: 60px;
+.arrow {
+  width: 100px;
+  display: block;
+  margin-left: 130px;
+  margin-top: 30px;
+}
+
+.slogan {
   margin: 10px;
+}
+
+.avatarPic {
+  width: 80px;
+  margin: 10px;
+  border-radius: 20%;
   
 }
 .logoPic{
-  width: 40%;
+  width: 80%;
   display: block;
-  margin: 40px;
+  margin: 30px;
 }
+
+.city {
+  width: 50%;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-columns: auto auto;
+  padding: 10px;
+
+}
+
+/* Hamburger Menu Styling */
 
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 216px;
-  top: 13px;
+  width: 46px;
+  height: 40px;
+  left: 300px;
+  top: 20px;
 }
 
 /* Color/shape of burger icon bars */

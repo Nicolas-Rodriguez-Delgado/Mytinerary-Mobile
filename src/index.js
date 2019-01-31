@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { slide as Menu } from 'react-burger-menu'
-
+import { slide as Menu } from 'react-burger-menu';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 
 class Landing extends React.Component {
@@ -14,8 +15,11 @@ class Landing extends React.Component {
             <MainToolBar />
             <Logo />
 
-            <p>Find your perfect trip, designed by insiders who know and love their cities</p>
+            <p className="slogan">Find your perfect trip, designed by insiders who know and love their cities</p>
 
+            <img src='/images/circled-right-2.png' className="arrow"/>
+
+            <PicCarousel />
             </div>
         );
     }
@@ -25,7 +29,7 @@ class Avatar extends React.Component {
     render(){
         return(
             <div className="avatar">
-                <img src='/images/whiskers-sam.jpg' className="avatarPic" />
+                <img src='/images/whiskers-sam.jpg' alt="Avatar" className="avatarPic" />
             </div>
         )
     }
@@ -61,6 +65,36 @@ class Logo extends React.Component {
         )
     }
 }
+
+class PicCarousel extends React.Component {
+    render() {
+        return (
+            <Carousel interval="3000" autoPlay="true" >
+               
+               
+                <div className="grid-container">
+                    <img className="city" className="grid-item"  src="/images/cities/amsterdambig.jpg" />
+                    <p className="legend">Amsterdam</p>
+                    <img className="city" className="grid-item"  src="/images/cities/londonbig.jpg" />
+                    <p className="legend">London</p>
+                    <img className="city" className="grid-item"  src="/images/cities/Rome.jpg" />
+                    <p className="legend">Rome</p>
+                    <img className="city" className="grid-item"  src="/images/cities/Split.jpg" />
+                <p className="legend">Split</p>
+                </div>
+                <div>
+                
+                </div>
+                <div>
+                
+                </div>
+                <div>
+                
+                </div>
+            </Carousel>
+        );
+    }
+};
 
 ReactDOM.render(<Landing />, document.getElementById('root'));
 
