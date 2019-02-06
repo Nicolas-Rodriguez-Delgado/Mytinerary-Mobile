@@ -7,6 +7,7 @@ import { slide as Menu } from 'react-burger-menu';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import {Grid} from '@material-ui/core/Grid';
+import LoginMenu from './Layout/Login';
 
 
 class Landing extends React.Component {
@@ -62,6 +63,7 @@ class Logo extends React.Component {
         return(
             <div className="Logo">
                 <img src='/images/MYtineraryLogo.png' alt="logo" className="logoPic"/>
+                <LoginMenu />
             </div>
         )
     }
@@ -73,7 +75,6 @@ class PicCarousel extends React.Component {
             <Carousel interval="3000" autoPlay="true" showThumbs={false} infiniteLoop="true" showStatus={false} >
                
                
-                
             <div>
                     <img className="city" src="/images/cities/amsterdambig.jpg" />
                     <p className="legend">Amsterdam</p>
