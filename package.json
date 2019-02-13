@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Nicolas-Rodriguez-Delgado/Mytinerary-Mobile#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.4.11"
   }
 }
