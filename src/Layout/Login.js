@@ -1,6 +1,5 @@
 import React from 'react';
 import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
-import '~bootstrap/scss/bootstrap.scss';
 
 
 class LoginMenu extends React.Component {
