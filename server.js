@@ -30,5 +30,21 @@ router.get('/about', function(req, res) {
     res.send('im the about page!'); 
 });
 
+router.get('/test', function(req,res) {
+  res.send('Hello My World');
+});
+
 // apply the routes to our application
 app.use('/', router);
+
+//moongoose connection to Mongo DB
+var mongoose = require('mongoose');
+mongoose.connect("mongodb+srv://mytinerary-klmlp.mongodb.net/test");
+
+mongoose.connection.once('open', function (){
+  console.log("Connection made")
+}).on('error', function(err){
+  console.log("Connection failed due to" + err)
+});
+
+
