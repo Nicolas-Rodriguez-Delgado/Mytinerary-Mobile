@@ -39,6 +39,8 @@ app.use('/', router);
 
 //moongoose connection to Mongo DB
 var mongoose = require('mongoose');
+var validator = require('validator');
+
 mongoose.connect("mongodb+srv://mytinerary-klmlp.mongodb.net/test");
 
 mongoose.connection.once('open', function (){
