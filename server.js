@@ -21,9 +21,9 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 var router = express.Router();
 
 // home page route (http://localhost:8080)
-router.get('/', function(req, res) {
-    res.send('im the home page!');  
-});
+// router.get('/', function(req, res) {
+//     res.send('im the home page!');  
+// });
 
 // about page route (http://localhost:8080/about)
 router.get('/about', function(req, res) {
