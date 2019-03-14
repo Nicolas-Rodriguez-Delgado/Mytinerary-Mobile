@@ -26,12 +26,12 @@ var router = express.Router();
 // });
 
 // about page route (http://localhost:8080/about)
-router.get('/about', function(req, res) {
-    res.send('im the about page!'); 
+router.get('/berlin', function(req, res) {
+    res.send('im the Berlin page!'); 
 });
 
-router.get('/test', function(req,res) {
-  res.send('Hello My World');
+router.get('/london', function(req,res) {
+  res.send('Hello London');
 });
 
 // apply the routes to our application
@@ -49,4 +49,13 @@ mongoose.connection.once('open', function (){
   console.log("Connection failed due to" + err)
 });
 
+var Schema = mongoose.Schema;
+
+var CitySchema = new Schema ({
+  name: String,
+  country: String
+
+});
+
+var City = mongoose.model('city', CitySchema);
 
